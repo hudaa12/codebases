@@ -1,4 +1,3 @@
-
 import os
 import psycopg
 from flask import Flask, request, redirect, url_for, escape
@@ -26,7 +25,7 @@ def setup_database(url):
 
     # Get a 'cursor' object that we can use to run SQL
     cursor = connection.cursor()
-
+    
     # Execute some SQL to create the table
     cursor.execute("CREATE TABLE IF NOT EXISTS messages (message TEXT);")
 
